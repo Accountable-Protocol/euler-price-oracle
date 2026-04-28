@@ -9,8 +9,8 @@ contract Deploy is Script {
     function run() external {
         vm.startBroadcast();
 
-        address vault = 0x1234567890123456789012345678901234567890;  // Valos vault address
-        address quote = 0x1234567890123456789012345678901234567890;  // aUSD or USDC address
+        address vault = 0x8d3F9f9Eb2f5E8B48EFBB4074440D1E2A34Bc365;  // Valos vault address
+        address quote = 0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a;  // aUSD address
 
         ValosRateProvider vrp = new ValosRateProvider(vault);
         RateProviderOracle oracle = new RateProviderOracle(vault, quote, address(vrp));
